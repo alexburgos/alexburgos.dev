@@ -1,32 +1,34 @@
 # alexburgos.dev
 
-My personal website built with SvelteKit and deployed on Cloudflare Pages.
+My personal website built with SvelteKit and Vite, deployed on Cloudflare Pages.
 
 ## Tech Stack
 
 - SvelteKit
 - TailwindCSS
+- Vite
+- Daisy UI
 - Cloudflare Pages
 - GitHub Actions
+- Playwright testing
 
 ## Development
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun run dev
 ```
 
 ## Deployment
 
-The site is automatically deployed to Cloudflare Pages when changes are pushed to the `master` branch.
+The site is automatically deployed to Cloudflare Pages when changes are pushed to the `main` branch.
 
 ## License
 
 MIT
 
 ---
-Last updated: 2024
-Deployment test
+Last updated: 2025
