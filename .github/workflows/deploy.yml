@@ -19,9 +19,6 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
 
-      - name: Move to project directory
-        run: cd alexburgos.dev
-
       - name: Install dependencies
         run: bun install
 
