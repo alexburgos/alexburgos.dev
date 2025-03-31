@@ -19,6 +19,13 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
 
+      - name: Debug directory structure
+        run: |
+          pwd
+          ls -la
+          echo "Current directory structure:"
+          find . -maxdepth 2 -type d
+
       - name: Install dependencies
         run: bun install
 
@@ -26,8 +33,9 @@ jobs:
         env:
           NODE_ENV: production
         run: |
+          bun run prepare
           bun run build
-          ls -la .svelte-kit/cloudflare || echo "Build output directory not found"
+          ls -la .svelte-kit/cloudflare
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
