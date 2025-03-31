@@ -10,7 +10,6 @@ My personal website built with SvelteKit and Vite, deployed on Cloudflare Pages.
 - Daisy UI
 - Cloudflare Pages
 - GitHub Actions
-- Playwright testing
 
 ## Development
 

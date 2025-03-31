@@ -22,7 +22,8 @@
     "*.ts",
     "*.tsx",
     "tailwind.config.js",
-    "eslint.config.js"
-, "vite.config.js", "playwright.config.js"  ],
+    "eslint.config.js",
+    "vite.config.js",
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
