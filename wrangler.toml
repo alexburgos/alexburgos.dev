@@ -6,3 +6,6 @@ cwd = "."
 
 [site]
 bucket = ".svelte-kit/cloudflare"
+
+[pages]
+pages_build_output_dir = ".svelte-kit/cloudflare"
