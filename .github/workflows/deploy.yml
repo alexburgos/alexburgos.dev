@@ -16,42 +16,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
 
-      - name: Move to correct directory
-        run: |
-          cd alexburgos.dev || true
-          pwd
-          ls -la
+      - name: Move to project directory
+        run: cd alexburgos.dev
 
       - name: Install dependencies
         run: bun install
 
-      - name: Debug current directory
-        run: |
-          pwd
-          ls -la
-
       - name: Build with SvelteKit
         env:
           NODE_ENV: production
-        run: |
-          echo "Starting build..."
-          bun run build
-          echo "Build completed. Checking all possible build directories..."
-          echo "Checking root directory:"
-          ls -la
-          echo "Checking .svelte-kit directory:"
-          ls -la .svelte-kit || echo "No .svelte-kit directory"
-          echo "Checking .svelte-kit/cloudflare directory:"
-          ls -la .svelte-kit/cloudflare || echo "No .svelte-kit/cloudflare directory"
+        run: bun run build
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
