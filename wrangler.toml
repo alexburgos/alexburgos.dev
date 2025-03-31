@@ -1,7 +1,7 @@
 main = "workers-site/index.js" 
 
 [build]
-command = "bun run build"
+command = "bun install && bun run build"
 cwd = "."
 
 [site]
