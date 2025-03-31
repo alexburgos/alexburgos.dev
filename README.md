@@ -15,6 +15,7 @@ My personal website built with SvelteKit and Vite, deployed on Cloudflare Pages.
 ## Development
 
 This project uses [Bun](https://bun.sh) as its preferred package manager. While npm and yarn are also supported, you'll need:
+
 - Node.js 18+ (for ESM support)
 - TypeScript support in your environment
 
@@ -41,4 +42,5 @@ The site is automatically deployed to Cloudflare Pages when changes are pushed t
 MIT
 
 ---
+
 Last updated: 2025

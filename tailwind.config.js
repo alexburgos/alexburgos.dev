@@ -8,4 +8,4 @@ export default {
     themes: ['black', 'lofi'],
     base: true,
   },
-} 
+};

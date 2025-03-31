@@ -7,8 +7,12 @@ test.describe('alexburgos.dev Website Tests', () => {
 		await expect(page.locator('h1')).toBeVisible();
 		await expect(page.locator('h1')).toHaveText('alex.burgos');
 
-		await expect(page.locator('div.px-6.lg\\:px-0.lg\\:w-\\[912px\\].mx-auto.mb-20.md\\:mb-24')).toBeVisible();
-		await expect(page.locator('div.px-6.lg\\:px-0.lg\\:w-\\[912px\\].mx-auto.mb-20.md\\:mb-24 p')).toHaveText(/Hi! I'm Alex/);
+		await expect(
+			page.locator('div.px-6.lg\\:px-0.lg\\:w-\\[912px\\].mx-auto.mb-20.md\\:mb-24')
+		).toBeVisible();
+		await expect(
+			page.locator('div.px-6.lg\\:px-0.lg\\:w-\\[912px\\].mx-auto.mb-20.md\\:mb-24 p')
+		).toHaveText(/Hi! I'm Alex/);
 
 		await expect(page.locator('footer')).toBeVisible();
 
