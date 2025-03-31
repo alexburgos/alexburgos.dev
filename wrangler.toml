@@ -1,6 +1,7 @@
 [build]
 command = "bun run build"
 cwd = "."
+lockfile = "bun.lockb"
 
 [site]
 bucket = ".svelte-kit/cloudflare"

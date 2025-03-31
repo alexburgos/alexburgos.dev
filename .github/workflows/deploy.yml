@@ -26,10 +26,7 @@ jobs:
         uses: oven-sh/setup-bun@v1
 
       - name: Install dependencies
-        run: |
-          bun install
-          touch package-lock.json
-          echo "{}" > package-lock.json
+        run: bun install
 
       - name: Debug current directory
         run: |
