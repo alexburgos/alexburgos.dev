@@ -1,9 +1,8 @@
+main = "workers-site/index.js" 
+
 [build]
 command = "bun run build"
 cwd = "."
-lockfile = "bun.lockb"
 
 [site]
 bucket = ".svelte-kit/cloudflare"
-
-pages_build_output_dir = ".svelte-kit/cloudflare" 
