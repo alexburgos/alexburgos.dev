@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: lofi, black;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+}
