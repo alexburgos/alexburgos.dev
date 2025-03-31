@@ -23,7 +23,7 @@
     "*.tsx",
     "tailwind.config.js",
     "eslint.config.js",
-    "vite.config.js",
+    "vite.config.js"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
