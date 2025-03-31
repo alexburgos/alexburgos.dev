@@ -14,12 +14,22 @@ My personal website built with SvelteKit and Vite, deployed on Cloudflare Pages.
 
 ## Development
 
-```bash
-# Install dependencies
-bun install
+This project uses [Bun](https://bun.sh) as its preferred package manager. While npm and yarn are also supported, you'll need:
+- Node.js 18+ (for ESM support)
+- TypeScript support in your environment
 
-# Start development server
+```bash
+# Using Bun (recommended)
+bun install
 bun run dev
+
+# Using npm
+npm install
+npm run dev
+
+# Using yarn
+yarn install
+yarn dev
 ```
 
 ## Deployment
