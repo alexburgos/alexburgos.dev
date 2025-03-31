@@ -8,12 +8,11 @@
     "dev": "vite dev",
     "build": "NODE_ENV=production vite build",
     "preview": "vite preview",
-    "prepare": "husky",
+    "prepare": "svelte-kit sync",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",
-    "lint": "prettier --check . && eslint .",
-    "test": "playwright test"
+    "lint": "prettier --check . && eslint ."
   },
   "lint-staged": {
     "*.{js,ts,svelte}": [
@@ -24,12 +23,10 @@
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
     "@eslint/js": "^9.18.0",
-    "@playwright/test": "1.40.0",
     "@sveltejs/adapter-cloudflare": "^5.0.1",
     "@sveltejs/kit": "^2.16.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "@tailwindcss/typography": "^0.5.15",
-    "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^22.13.14",
     "@typescript-eslint/eslint-plugin": "^8.29.0",
     "@typescript-eslint/parser": "^8.29.0",
