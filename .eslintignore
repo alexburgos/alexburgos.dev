@@ -1,0 +1,7 @@
+.svelte-kit/
+build/
+dist/
+node_modules/
+coverage/
+.cloudflare/
+.output/ 

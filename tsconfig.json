@@ -20,7 +20,6 @@
     "src/**/*.js",
     "src/**/*.svelte",
     "*.ts",
-    "*.tsx",
     "tailwind.config.js",
     "eslint.config.js",
     "vite.config.js"
