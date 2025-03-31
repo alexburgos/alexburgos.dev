@@ -25,7 +25,9 @@ jobs:
       - name: Build with SvelteKit
         env:
           NODE_ENV: production
-        run: bun run build
+        run: |
+          bun run build
+          ls -la .svelte-kit/cloudflare || echo "Build output directory not found"
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
