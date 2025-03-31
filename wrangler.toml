@@ -3,4 +3,7 @@ command = "bun run build"
 cwd = "."
 
 [site]
-bucket = "./build" 
+bucket = ".svelte-kit/cloudflare"
+
+[pages_build_output_dir]
+directory = ".svelte-kit/cloudflare" 
