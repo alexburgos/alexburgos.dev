@@ -12,7 +12,9 @@
     "moduleResolution": "bundler",
     "target": "ESNext",
     "module": "ESNext",
-    "isolatedModules": true
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true
   },
   "include": [
     "src/**/*.d.ts",
