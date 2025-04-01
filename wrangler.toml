@@ -1,11 +1,6 @@
-main = "workers-site/index.js" 
-
 [build]
 command = "bun install && bun run build"
 cwd = "."
 
-[site]
-bucket = ".svelte-kit/cloudflare"
-
 [pages]
-pages_build_output_dir = ".svelte-kit/cloudflare"
+build_output_dir = ".svelte-kit/cloudflare"
