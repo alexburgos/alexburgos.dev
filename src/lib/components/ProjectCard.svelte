@@ -1,14 +1,19 @@
-<script>
+<script lang="ts">
   let {
     project = 'PROJECT',
     role = 'ROLE',
     company = 'COMPANY',
     location = 'CITY, COUNTRY',
   } = $props();
+
+  function handleClick() {
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', '_blank', 'noopener,noreferrer');
+  }
 </script>
 
-<div
-  class="card border-base-content/20 hover:border-base-content/75 flex h-[300px] w-full cursor-pointer flex-col justify-between rounded-none border p-6 transition-colors"
+<button
+  onclick={handleClick}
+  class="card border-base-content/20 hover:border-base-content/75 flex h-[300px] w-full cursor-pointer flex-col justify-between rounded-none border p-6 transition-colors text-left"
 >
   <div class="space-y-2">
     <h3 class="text-lg">{project}</h3>
@@ -33,4 +38,4 @@
       ></polyline></svg
     >
   </div>
-</div>
+</button>

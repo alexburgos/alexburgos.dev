@@ -6,6 +6,11 @@ import ts from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import svelteParser from 'svelte-eslint-parser';
 
+const sharedLanguageOptions = {
+  ecmaVersion: 'latest',
+  sourceType: 'module',
+};
+
 export default [
   {
     ignores: [
@@ -21,10 +26,7 @@ export default [
   js.configs.recommended,
   prettier,
   {
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    },
+    languageOptions: sharedLanguageOptions,
   },
   {
     files: ['**/*.svelte'],
@@ -35,8 +37,7 @@ export default [
           ts: tsParser,
         },
         svelteConfig,
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ...sharedLanguageOptions,
       },
     },
     plugins: {
@@ -55,8 +56,7 @@ export default [
       parser: tsParser,
       parserOptions: {
         project: './tsconfig.json',
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ...sharedLanguageOptions,
       },
     },
     plugins: {
