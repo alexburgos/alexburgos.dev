@@ -56,7 +56,7 @@
         role="Developer"
         company="Personal"
         location="Barcelona, Spain"
-        projectLink="hhttps://www.henrysbar.es/"
+        projectLink="https://www.henrysbar.es/"
       />
     </div>
   </div>
