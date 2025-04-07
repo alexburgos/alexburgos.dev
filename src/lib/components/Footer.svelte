@@ -17,6 +17,7 @@
     const theme = darkMode ? 'black' : 'lofi';
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+    console.log(theme);
   }
 
   // Set initial theme

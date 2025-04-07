@@ -25,10 +25,11 @@
   <div bind:this={carousel} class="carousel carousel-center w-full gap-4 md:gap-8">
     <div class="carousel-item w-[85vw] md:w-[280px]">
       <ProjectCard
-        project="Travel Platform"
+        project="Kiwi.com Account"
         role="Software Engineer"
         company="Kiwi.com"
         location="Barcelona, Spain"
+        projectLink="https://www.kiwi.com/en/user"
       />
     </div>
     <div class="carousel-item w-[85vw] md:w-[280px]">
@@ -37,30 +38,25 @@
         role="Front End Engineer"
         company="Smartly"
         location="Helsinki, Finland"
+        projectLink="https://www.smartly.io"
       />
     </div>
     <div class="carousel-item w-[85vw] md:w-[280px]">
       <ProjectCard
-        project="Personal Website"
+        project="Union Discount"
         role="Developer"
         company="Personal"
-        location="Helsinki, Finland"
+        location="Barcelona, Spain"
+        projectLink="https://www.uniondiscount.com"
       />
     </div>
     <div class="carousel-item w-[85vw] md:w-[280px]">
       <ProjectCard
-        project="Personal Website"
+        project="Henry's Website"
         role="Developer"
         company="Personal"
-        location="Helsinki, Finland"
-      />
-    </div>
-    <div class="carousel-item w-[85vw] md:w-[280px]">
-      <ProjectCard
-        project="Personal Website"
-        role="Developer"
-        company="Personal"
-        location="Helsinki, Finland"
+        location="Barcelona, Spain"
+        projectLink="https://www.henrys.es"
       />
     </div>
   </div>

@@ -4,14 +4,11 @@
     role = 'ROLE',
     company = 'COMPANY',
     location = 'CITY, COUNTRY',
+    projectLink,
   } = $props();
 
   function handleClick() {
-    window.open(
-      'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley',
-      '_blank',
-      'noopener,noreferrer'
-    );
+    window.open(projectLink, '_blank', 'noopener,noreferrer');
   }
 </script>
 
