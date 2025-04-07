@@ -47,7 +47,7 @@
         role="Developer"
         company="Personal"
         location="Barcelona, Spain"
-        projectLink="https://www.uniondiscount.com"
+        projectLink="https://www.uniondiscount.net"
       />
     </div>
     <div class="carousel-item w-[85vw] md:w-[280px]">
@@ -56,7 +56,7 @@
         role="Developer"
         company="Personal"
         location="Barcelona, Spain"
-        projectLink="https://www.henrys.es"
+        projectLink="hhttps://www.henrysbar.es/"
       />
     </div>
   </div>
