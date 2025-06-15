@@ -1,12 +1,28 @@
 <script lang="ts">
   import P5 from 'p5-svelte';
+  import { onMount } from 'svelte';
+
+  let isDesktop = false;
+  let title = 'alex.burgos';
+
+  onMount(() => {
+    const checkScreenSize = () => {
+      isDesktop = window.innerWidth >= 768; // md breakpoint
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  });
 
   const sketch = (p5: any) => {
     let x: number[] = [],
       y: number[] = [],
       segNum = 6,
       segLength = 40;
-    let title = 'alex.burgos';
     let interFont: any;
     let isHovering = false;
 
@@ -75,6 +91,22 @@
   };
 </script>
 
-<div class="relative mt-10 mb-20 md:mb-24">
-  <P5 {sketch} />
+<div class="relative mt-10 mb-20 md:mt-0 md:mb-24">
+  {#if isDesktop}
+    <P5 {sketch} />
+  {:else}
+    <h1
+      class="cursor-pointer text-center text-[4rem] font-bold tracking-tight hover:text-red-800 sm:text-[6rem]"
+    >
+      {title}
+    </h1>
+  {/if}
 </div>
+
+<style>
+  /* Ensure the canvas takes full width on desktop */
+  :global(canvas) {
+    width: 100% !important;
+    height: auto !important;
+  }
+</style>
