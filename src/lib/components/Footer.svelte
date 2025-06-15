@@ -35,20 +35,20 @@
           href={link.href}
           target={link.target}
           rel={link.rel}
-          class="text-sm transition-colors hover:opacity-75 md:leading-6">{link.text}</a
+          class="text-sm transition-colors hover:text-red-800 md:leading-6">{link.text}</a
         >
       {/each}
     </div>
     <div class="flex flex-col space-x-4">
       {#each links.right as link (link.text)}
-        <a href={link.href} class="text-sm transition-colors hover:opacity-75 md:leading-6"
+        <a href={link.href} class="text-sm transition-colors hover:text-red-800 md:leading-6"
           >{link.text}</a
         >
       {/each}
     </div>
     <div class="flex flex-col space-x-4 self-end">
       <button
-        class="mt-auto cursor-pointer text-sm transition-colors hover:opacity-75 md:leading-6"
+        class="hover: mt-auto cursor-pointer text-sm transition-colors hover:opacity-75 md:leading-6"
         onclick={toggleTheme}
       >
         DARK MODE: {darkMode ? 'ON' : 'OFF'}

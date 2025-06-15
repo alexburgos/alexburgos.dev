@@ -21,7 +21,7 @@
   }
 </script>
 
-<div class="relative mx-auto mb-20 px-6 lg:mb-28 lg:w-[912px] lg:px-0">
+<div class="relative mx-auto mb-20 px-6 lg:mb-28 lg:w-[912px] lg:px-0" id="projects">
   <div bind:this={carousel} class="carousel carousel-center w-full gap-4 md:gap-8">
     <div class="carousel-item w-[85vw] md:w-[280px]">
       <ProjectCard
