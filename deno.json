@@ -1,0 +1,30 @@
+{
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext"
+  },
+  "tasks": {
+    "dev": "deno run -A npm:vite dev",
+    "build": "NODE_ENV=production deno run -A npm:vite build",
+    "preview": "deno run -A npm:vite preview",
+    "prepare": "deno run -A npm:svelte-kit sync",
+    "check": "deno run -A npm:svelte-kit sync",
+    "format:check": "deno fmt --check",
+    "format": "deno fmt",
+    "lint": "deno lint",
+    "install": "deno install"
+  },
+  "imports": {
+    "@/": "./src/",
+    "@/*": "./src/*"
+  }
+}
