@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 
@@ -8,6 +8,6 @@
 
 @layer base {
   html {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 }

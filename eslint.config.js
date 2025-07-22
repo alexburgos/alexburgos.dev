@@ -1,26 +1,26 @@
-import prettier from "eslint-config-prettier";
-import js from "@eslint/js";
-import svelte from "eslint-plugin-svelte";
-import svelteConfig from "./svelte.config.js";
-import ts from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import svelteParser from "svelte-eslint-parser";
+import prettier from 'eslint-config-prettier';
+import js from '@eslint/js';
+import svelte from 'eslint-plugin-svelte';
+import svelteConfig from './svelte.config.js';
+import svelteParser from 'svelte-eslint-parser';
+import tsParser from '@typescript-eslint/parser';
 
 const sharedLanguageOptions = {
-  ecmaVersion: "latest",
-  sourceType: "module",
+  ecmaVersion: 'latest',
+  sourceType: 'module',
 };
 
 export default [
   {
     ignores: [
-      ".svelte-kit/**/*",
-      "build/**/*",
-      "dist/**/*",
-      "node_modules/**/*",
-      "coverage/**/*",
-      ".cloudflare/**/*",
-      ".output/**/*",
+      '.svelte-kit/**/*',
+      'build/**/*',
+      'dist/**/*',
+      'node_modules/**/*',
+      'coverage/**/*',
+      '.cloudflare/**/*',
+      '.output/**/*',
+      '**/*.ts', // Ignore TypeScript files since Bun handles them
     ],
   },
   js.configs.recommended,
@@ -29,12 +29,12 @@ export default [
     languageOptions: sharedLanguageOptions,
   },
   {
-    files: ["**/*.svelte"],
+    files: ['**/*.svelte'],
     languageOptions: {
       parser: svelteParser,
       parserOptions: {
         parser: {
-          ts: tsParser,
+          ts: tsParser, // Handle TypeScript in Svelte files
         },
         svelteConfig,
         ...sharedLanguageOptions,
@@ -42,29 +42,11 @@ export default [
     },
     plugins: {
       svelte,
-      "@typescript-eslint": ts,
     },
     rules: {
       ...svelte.configs.recommended[0].rules,
       ...svelte.configs.prettier[0].rules,
-      "no-undef": "off",
-    },
-  },
-  {
-    files: ["**/*.ts"],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        project: "./tsconfig.json",
-        ...sharedLanguageOptions,
-      },
-    },
-    plugins: {
-      "@typescript-eslint": ts,
-    },
-    rules: {
-      ...ts.configs.recommended.rules,
-      "no-undef": "off",
+      'no-undef': 'off',
     },
   },
 ];

@@ -1,21 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-
-  let isDesktop = false;
   let title = 'alex.burgos';
-
-  onMount(() => {
-    const checkScreenSize = () => {
-      isDesktop = window.innerWidth >= 768; // md breakpoint
-    };
-
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-
-    return () => {
-      window.removeEventListener('resize', checkScreenSize);
-    };
-  });
 
   // TODO: use this sketch somewhere else
   // const sketch = (p5: any) => {
