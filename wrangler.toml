@@ -1,5 +1,5 @@
 [build]
-command = "bun install && bun run build"
+command = "npm install -g deno@latest && deno install && deno task build"
 cwd = "."
 
 [pages]

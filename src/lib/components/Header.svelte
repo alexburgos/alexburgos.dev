@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
+  let isDesktop = false;
   let title = 'alex.burgos';
 
   onMount(() => {
