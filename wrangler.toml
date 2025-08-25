@@ -1,5 +1,5 @@
 [build]
-command = "bun install && bun install -g vite && bun run build"
+command = "bun install && bunx --bun vite build"
 cwd = "."
 
 [pages]

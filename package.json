@@ -5,9 +5,9 @@
   "type": "module",
   "packageManager": "bun@1.2.18",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "bunx --bun vite dev",
+    "build": "bunx --bun vite build",
+    "preview": "bunx --bun vite preview",
     "prepare": "svelte-kit sync",
     "prettier:check": "prettier --check .",
     "prettier:format": "prettier --write .",
