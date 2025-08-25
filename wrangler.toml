@@ -1,6 +1,6 @@
 [build]
-command = "bun install && bun run build"
+command = "bun install && bun install -g vite && bun run build"
 cwd = "."
 
 [pages]
-build_output_dir = ".svelte-kit/cloudflare"
+pages_build_output_dir = ".svelte-kit/cloudflare"
