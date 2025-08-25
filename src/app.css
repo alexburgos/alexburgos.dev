@@ -6,8 +6,31 @@
   themes: lofi, black;
 }
 
+@font-face {
+  font-family: 'Terminal Grotesque';
+  src: url('/fonts/terminal-grotesque.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Show fallback font while custom font loads */
+}
+
 @layer base {
   html {
-    font-family: 'Inter', sans-serif;
+    /* System font stack as fallback */
+    font-family: 'Terminal Grotesque', ui-monospace, 'Courier New', monospace;
+  }
+
+  body {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-transform: lowercase;
+    }
+    p {
+      text-transform: uppercase;
+    }
   }
 }
