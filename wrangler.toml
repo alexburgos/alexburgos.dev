@@ -1,6 +1,6 @@
 [build]
-command = "bun install && bunx --bun vite build"
-cwd = "."
+command = "npm install && npm run build"
+buildCommand = "bun install && bun run build"
 
-[pages]
-pages_build_output_dir = ".svelte-kit/cloudflare"
+[site]
+bucket = ".svelte-kit/cloudflare"
