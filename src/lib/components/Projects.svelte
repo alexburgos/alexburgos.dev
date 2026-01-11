@@ -52,11 +52,11 @@
     </div>
     <div class="carousel-item w-[85vw] md:w-[280px]">
       <ProjectCard
-        project="Henry's Website"
+        project="SouthTropic Visuals PR"
         role="Developer"
         company="Personal"
-        location="Barcelona, Spain"
-        projectLink="https://www.henrysbar.es/"
+        location="Puerto Rico"
+        projectLink="https://www.stvisualspr.com/"
       />
     </div>
   </div>
