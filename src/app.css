@@ -19,18 +19,4 @@
     /* System font stack as fallback */
     font-family: 'Terminal Grotesque', ui-monospace, 'Courier New', monospace;
   }
-
-  body {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      text-transform: lowercase;
-    }
-    p {
-      text-transform: uppercase;
-    }
-  }
 }

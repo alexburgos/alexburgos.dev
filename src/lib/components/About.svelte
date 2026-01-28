@@ -5,5 +5,10 @@
 </script>
 
 <div class="mx-auto mb-20 px-6 md:mb-24 lg:w-[912px] lg:px-0">
-  <p class="whitespace-pre-wrap md:text-justify md:whitespace-normal">{text}</p>
+  <p
+    class="whitespace-pre-wrap normal-case md:text-justify md:whitespace-normal"
+    style="font-family: 'Open Sans', sans-serif;"
+  >
+    {text}
+  </p>
 </div>

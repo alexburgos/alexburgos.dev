@@ -1,12 +1,12 @@
 <script>
   let links = {
     left: [
-      { text: 'RESUME', href: '/Resume.pdf', target: '_blank', rel: 'noopener noreferrer' },
+      { text: 'Resume', href: '/Resume.pdf', target: '_blank', rel: 'noopener noreferrer' },
       { text: 'EMAIL', href: 'mailto:hello@alexburgos.dev' },
     ],
     right: [
-      { text: 'GITHUB', href: 'https://github.com/alexburgos' },
-      { text: 'LINKEDIN', href: 'https://www.linkedin.com/in/alexander-b-67073129' },
+      { text: 'Github', href: 'https://github.com/alexburgos' },
+      { text: 'Linkedin', href: 'https://www.linkedin.com/in/alexander-b-67073129' },
     ],
   };
 
@@ -51,7 +51,7 @@
         class="hover: mt-auto cursor-pointer text-sm transition-colors hover:opacity-75 md:leading-6"
         onclick={toggleTheme}
       >
-        DARK MODE: {darkMode ? 'ON' : 'OFF'}
+        Reading mode: {darkMode ? 'On' : 'Off'}
       </button>
     </div>
   </div>

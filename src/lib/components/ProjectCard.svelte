@@ -15,6 +15,7 @@
 <button
   onclick={handleClick}
   class="card border-base-content/20 hover:border-base-content/75 flex h-[300px] w-full cursor-pointer flex-col justify-between rounded-none border p-6 text-left transition-colors"
+  style="font-family: 'Open Sans', sans-serif;"
 >
   <div class="space-y-2">
     <h3 class="text-lg">{project}</h3>
@@ -23,7 +24,6 @@
     <p class="text-base-content/75">{location}</p>
   </div>
   <div class="flex items-center justify-between">
-    <span class="text-sm uppercase">VIEW</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
