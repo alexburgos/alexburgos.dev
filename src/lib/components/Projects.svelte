@@ -43,15 +43,6 @@
     </div>
     <div class="carousel-item w-[85vw] md:w-[280px]">
       <ProjectCard
-        project="Union Discount"
-        role="Developer"
-        company="Personal"
-        location="Barcelona, Spain"
-        projectLink="https://www.uniondiscount.net"
-      />
-    </div>
-    <div class="carousel-item w-[85vw] md:w-[280px]">
-      <ProjectCard
         project="Scarpeltele"
         role="Developer"
         company="Scarpel Limited"
