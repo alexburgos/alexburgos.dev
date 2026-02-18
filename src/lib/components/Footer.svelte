@@ -2,7 +2,7 @@
   let links = {
     left: [
       { text: 'Resume', href: '/Resume.pdf', target: '_blank', rel: 'noopener noreferrer' },
-      { text: 'EMAIL', href: 'mailto:hello@alexburgos.dev' },
+      { text: 'Email', href: 'mailto:hello@alexburgos.dev' },
     ],
     right: [
       { text: 'Github', href: 'https://github.com/alexburgos' },
@@ -51,7 +51,7 @@
         class="hover: mt-auto cursor-pointer text-sm transition-colors hover:opacity-75 md:leading-6"
         onclick={toggleTheme}
       >
-        {darkMode ? '🌙' : '☀️'}
+        <span class="text-xl">{darkMode ? '🌙' : '☀️'}</span>
       </button>
     </div>
   </div>
