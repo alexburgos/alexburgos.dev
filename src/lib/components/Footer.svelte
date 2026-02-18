@@ -51,7 +51,7 @@
         class="hover: mt-auto cursor-pointer text-sm transition-colors hover:opacity-75 md:leading-6"
         onclick={toggleTheme}
       >
-        Reading mode: {darkMode ? 'On' : 'Off'}
+        {darkMode ? '🌙' : '☀️'}
       </button>
     </div>
   </div>
