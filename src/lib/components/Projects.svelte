@@ -34,8 +34,17 @@
     </div>
     <div class="carousel-item w-[85vw] md:w-[280px]">
       <ProjectCard
+        project="Smartly"
+        role="Software Engineer"
+        company="Smartly.io"
+        location="Helsinki, Finland"
+        projectLink="https://www.smartly.io/"
+      />
+    </div>
+    <div class="carousel-item w-[85vw] md:w-[280px]">
+      <ProjectCard
         project="SouthTropic Visuals PR"
-        role="Developer"
+        role="Web Developer"
         company="Personal"
         location="Puerto Rico"
         projectLink="https://www.stvisualspr.com/"
@@ -44,7 +53,7 @@
     <div class="carousel-item w-[85vw] md:w-[280px]">
       <ProjectCard
         project="Scarpeltele"
-        role="Developer"
+        role="Web Developer"
         company="Scarpel Limited"
         location="Remote"
         projectLink="https://scarpeltele.com/"

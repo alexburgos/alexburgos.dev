@@ -1,11 +1,13 @@
 <script lang="ts">
-  let {
-    project = 'PROJECT',
-    role = 'ROLE',
-    company = 'COMPANY',
-    location = 'CITY, COUNTRY',
-    projectLink,
-  } = $props();
+  interface Props {
+    project?: string;
+    role?: string;
+    company?: string;
+    location?: string;
+    projectLink: string;
+  }
+
+  let { project = '', role = '', company = '', location = '', projectLink }: Props = $props();
 
   function handleClick() {
     window.open(projectLink, '_blank', 'noopener,noreferrer');
