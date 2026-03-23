@@ -1,6 +1,9 @@
 <script>
   let text = $state(
-    `Hi! I'm Alex, a Front End Engineer with 10 years of coding experience. I'm currently a Software Engineer at Kiwi.com where I'm working alongside designers to build intuitive, accessible, and scalable web features for our popular travel app.\n\nBesides coding I like to get involved with analog photography, social activism, and discuss movies. From a smooth-scrolling website to a stylish water kettle - I appreciate thoughtful and user-friendly design. I'm originally from Puerto Rico and New York but you can currently find me in Barcelona.`
+    `Hi I'm alex 👋, I'm a Front End Engineer with over 10 years of experience turning design and ideas into UIs people enjoy using. My work consists of building accessible, performant web apps.
+    But lately I've been drawn into creative coding and working with AI agents, using these tools to expand what's possible with them and learn new ways to code or work.
+    \n
+    Outside of coding, I like to: shoot photos on film, talk about cinema, and experiment in the kitchen. I come from a background in political organizing, which gave me a lasting appreciation for people and culture, inside and outside of a work environment.`
   );
 </script>
 
