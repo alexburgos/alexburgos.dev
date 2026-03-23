@@ -35,6 +35,7 @@ export default [
     },
     rules: {
       'no-undef': 'off',
+      'svelte/no-navigation-without-resolve': 'off',
     },
   },
 ];
