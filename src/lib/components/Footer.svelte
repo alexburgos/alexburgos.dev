@@ -4,6 +4,10 @@
       { text: 'Resume', href: '/Resume.pdf', target: '_blank', rel: 'noopener noreferrer' },
       { text: 'Email', href: 'mailto:hello@alexburgos.dev' },
     ],
+    center: [
+      { text: 'Projects', href: '/projects' },
+      { text: 'Blog', href: '/blog' },
+    ],
     right: [
       { text: 'Github', href: 'https://github.com/alexburgos' },
       { text: 'Linkedin', href: 'https://www.linkedin.com/in/alexander-b-67073129' },
@@ -27,8 +31,8 @@
   });
 </script>
 
-<footer class="bg-base-100 sticky right-0 bottom-0 left-0 p-6">
-  <div class="flex items-center justify-between">
+<footer class="bg-base-100 right-0 bottom-0 left-0 p-6">
+  <div class="flex items-end justify-between">
     <div class="flex flex-col space-x-4">
       {#each links.left as link (link.text)}
         <a
@@ -36,6 +40,13 @@
           target={link.target}
           rel={link.rel}
           class="text-sm transition-colors hover:text-red-800 md:leading-6">{link.text}</a
+        >
+      {/each}
+    </div>
+    <div class="flex flex-col space-x-4">
+      {#each links.center as link (link.text)}
+        <a href={link.href} class="text-sm transition-colors hover:text-red-800 md:leading-6"
+          >{link.text}</a
         >
       {/each}
     </div>

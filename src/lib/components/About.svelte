@@ -1,4 +1,10 @@
-<script>
+<script lang="ts">
+  interface Props {
+    class?: string;
+  }
+
+  let { class: className = '' }: Props = $props();
+
   let text = $state(
     `Hi I'm Alex 👋, I'm a Frontend engtineer with over 10 years of experience turning design and ideas into UIs people enjoy using. My work consists of building accessible, performant web apps.
     But lately I've been drawn to creative coding and working with AI agents, and I'm really interested ion using these tools to expand what's possible while learning new ways to work with code.
@@ -7,7 +13,7 @@
   );
 </script>
 
-<div class="mx-auto mb-20 px-6 md:mb-24 lg:w-[912px] lg:px-0">
+<div class="mx-auto mb-20 px-6 md:mb-24 lg:w-[912px] lg:px-0 {className}">
   <p class="whitespace-pre-wrap normal-case md:text-justify md:whitespace-normal">
     {text}
   </p>

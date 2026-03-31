@@ -11,6 +11,7 @@
     "prepare": "svelte-kit sync",
     "prettier:check": "prettier --check .",
     "prettier:format": "prettier --write .",
+    "typecheck": "svelte-check",
     "lint": "prettier --check . && eslint ."
   },
   "lint-staged": {
@@ -26,6 +27,11 @@
     "@sveltejs/vite-plugin-svelte": "^5.1.1",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
+    "@types/marked": "^6.0.0",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.183.1",
     "@typescript-eslint/parser": "^8.57.2",
     "daisyui": "^5.5.19",
     "eslint": "^9.39.4",
@@ -40,5 +46,12 @@
     "svelte-eslint-parser": "^1.6.0",
     "tailwindcss": "^4.2.2",
     "vite": "^6.4.1"
+  },
+  "dependencies": {
+    "@keystatic/core": "^0.5.50",
+    "@threlte/core": "^8.5.5",
+    "@threlte/extras": "^9.14.0",
+    "marked": "^17.0.5",
+    "three": "^0.183.2"
   }
 }

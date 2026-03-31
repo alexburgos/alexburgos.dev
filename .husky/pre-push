@@ -1,1 +1,1 @@
-bun run prettier:check  && bun run lint
+bun run lint && bun run typecheck
