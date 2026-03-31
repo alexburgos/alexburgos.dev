@@ -21,6 +21,8 @@
       {#if data.date}
         <p class="text-base-content/40 text-xs">{data.date}</p>
       {/if}
+      <!-- Content is authored by the site owner via Keystatic — not user input -->
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -->
       {@html data.contentHtml}
     </article>
   </div>
