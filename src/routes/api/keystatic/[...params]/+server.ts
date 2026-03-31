@@ -1,17 +1,20 @@
-import { makeGenericAPIRouteHandler } from '@keystatic/core/api/generic';
 import { dev } from '$app/environment';
 import { error } from '@sveltejs/kit';
 import type { RequestEvent } from '@sveltejs/kit';
-import config from '../../../../../keystatic.config';
-
-const handler = makeGenericAPIRouteHandler({ config, localBaseDirectory: process.cwd() });
 
 async function handle(event: RequestEvent): Promise<Response> {
   if (!dev) error(404);
 
+  // Dynamic imports keep node:path / node:fs out of the production Worker bundle.
+  // This code is only reachable in local dev where Node.js is available.
+  const [{ makeGenericAPIRouteHandler }, { default: config }] = await Promise.all([
+    import('@keystatic/core/api/generic'),
+    import('../../../../../keystatic.config'),
+  ]);
+
+  const handler = makeGenericAPIRouteHandler({ config, localBaseDirectory: process.cwd() });
   const result = await handler(event.request);
 
-  // The generic handler returns a plain object, not a Web Response
   if (result instanceof Response) return result;
 
   return new Response((result.body as BodyInit) ?? null, {

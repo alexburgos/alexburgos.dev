@@ -1,6 +1,8 @@
 import { createReader } from '@keystatic/core/reader';
 import config from '../../../keystatic.config';
 
+export const prerender = true;
+
 export async function load() {
   const reader = createReader(process.cwd(), config);
   const posts = await reader.collections.posts.all();

@@ -3,6 +3,8 @@ import { marked } from 'marked';
 import { error } from '@sveltejs/kit';
 import config from '../../../../keystatic.config';
 
+export const prerender = true;
+
 export async function load({ params }) {
   const reader = createReader(process.cwd(), config);
   const post = await reader.collections.posts.read(params.slug);
