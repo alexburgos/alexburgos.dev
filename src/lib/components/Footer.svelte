@@ -1,69 +1,21 @@
 <script>
-  let links = {
-    left: [
-      { text: 'Resume', href: '/Resume.pdf', target: '_blank', rel: 'noopener noreferrer' },
-      { text: 'Email', href: 'mailto:hello@alexburgos.dev' },
-    ],
-    center: [
-      { text: 'Projects', href: '/projects' },
-      { text: 'Blog', href: '/blog' },
-    ],
-    right: [
-      { text: 'Github', href: 'https://github.com/alexburgos' },
-      { text: 'Linkedin', href: 'https://www.linkedin.com/in/alexander-b-67073129' },
-    ],
-  };
-
-  let darkMode = $state(true);
-
-  function toggleTheme() {
-    darkMode = !darkMode;
-    const theme = darkMode ? 'black' : 'lofi';
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }
-
-  // Set initial theme
-  $effect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'black';
-    darkMode = savedTheme === 'black';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  });
+  const links = [
+    { text: 'Blog', href: '/blog' },
+    { text: 'Projects', href: '/projects' },
+    { text: 'Github', href: 'https://github.com/alexburgos' },
+    { text: 'Linkedin', href: 'https://www.linkedin.com/in/alexander-b-67073129' },
+  ];
 </script>
 
 <footer class="bg-base-100 right-0 bottom-0 left-0 p-6">
-  <div class="flex items-end justify-between">
-    <div class="flex flex-col space-x-4">
-      {#each links.left as link (link.text)}
-        <a
-          href={link.href}
-          target={link.target}
-          rel={link.rel}
-          class="text-sm transition-colors hover:text-red-800 md:leading-6">{link.text}</a
-        >
-      {/each}
-    </div>
-    <div class="flex flex-col space-x-4">
-      {#each links.center as link (link.text)}
-        <a href={link.href} class="text-sm transition-colors hover:text-red-800 md:leading-6"
-          >{link.text}</a
-        >
-      {/each}
-    </div>
-    <div class="flex flex-col space-x-4">
-      {#each links.right as link (link.text)}
-        <a href={link.href} class="text-sm transition-colors hover:text-red-800 md:leading-6"
-          >{link.text}</a
-        >
-      {/each}
-    </div>
-    <div class="flex flex-col space-x-4 self-end">
-      <button
-        class="hover: mt-auto cursor-pointer text-sm transition-colors hover:opacity-75 md:leading-6"
-        onclick={toggleTheme}
+  <div class="flex w-full items-end justify-between">
+    {#each links as link (link.text)}
+      <a
+        href={link.href}
+        target={link.target}
+        rel={link.rel}
+        class="text-sm transition-colors hover:text-red-800 md:leading-6">{link.text}</a
       >
-        <span class="text-xl">{darkMode ? '🌙' : '☀️'}</span>
-      </button>
-    </div>
+    {/each}
   </div>
 </footer>
