@@ -5,7 +5,9 @@
   const title = 'alex.burgos';
 
   let mounted = $state(false);
-  onMount(() => { mounted = true; });
+  onMount(() => {
+    mounted = true;
+  });
 
   let darkMode = $state(true);
 
@@ -25,19 +27,19 @@
 
 <div class="relative mt-10 mb-20 md:mt-0 md:mb-24">
   {#if mounted}
-  <h1
-    in:fly={{ y: -200, duration: 600 }}
-    class="text-center text-[4rem] tracking-tight sm:text-[6rem] lg:text-[10rem]"
-  >
-    <button
-      type="button"
-      class="cursor-pointer hover:text-red-800"
-      onclick={toggleTheme}
-      title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-      aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+    <h1
+      in:fly={{ y: -200, duration: 600 }}
+      class="text-center text-[4rem] tracking-tight sm:text-[6rem] lg:text-[10rem]"
     >
-      {title}
-    </button>
-  </h1>
+      <button
+        type="button"
+        class="cursor-pointer hover:text-red-800"
+        onclick={toggleTheme}
+        title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+        aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+      >
+        {title}
+      </button>
+    </h1>
   {/if}
 </div>
