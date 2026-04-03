@@ -1,11 +1,9 @@
 <script>
   import Header from '$lib/components/Header.svelte';
   import About from '$lib/components/About.svelte';
-  import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<div class="flex min-h-screen flex-col">
+<div class="flex flex-1 flex-col">
   <Header />
   <About class="flex-1" />
-  <Footer />
 </div>

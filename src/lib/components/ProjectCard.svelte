@@ -35,7 +35,7 @@
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="rotate-[-45deg] transform"
+      class="-rotate-45 transform"
       ><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"
       ></polyline></svg
     >

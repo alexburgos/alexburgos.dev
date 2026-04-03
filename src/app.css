@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import '@fontsource-variable/sometype-mono';
 @plugin '@tailwindcss/typography';
 @plugin 'daisyui';
 
@@ -7,5 +8,5 @@
 }
 
 h1 {
-  font-family: 'Sometype Mono', monospace;
+  font-family: 'Sometype Mono Variable', monospace;
 }
