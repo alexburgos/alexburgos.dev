@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   const links = [
     { text: 'Blog', href: '/blog' },
     { text: 'Projects', href: '/projects' },
