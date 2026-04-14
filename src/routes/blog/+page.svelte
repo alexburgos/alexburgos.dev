@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import Breadcrumb from '$lib/components/Breadcrumb.svelte';
 
   let { data }: { data: PageData } = $props();
 </script>
@@ -10,9 +11,7 @@
 
 <div class="flex flex-1 flex-col">
   <div class="mx-auto flex w-full flex-1 flex-col px-6 py-10 lg:w-228 lg:px-0">
-    <p class="text-base-content/50 mb-12 text-sm">
-      <a href="/" class="transition-colors hover:text-red-800">alex.burgos</a> / blog
-    </p>
+    <Breadcrumb crumbs={[{ label: 'blog' }]} />
 
     {#if data.posts.length === 0}
       <div class="flex flex-1 items-center justify-center">

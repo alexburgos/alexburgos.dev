@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Links from './Links.svelte';
+
   interface Props {
     class?: string;
   }
@@ -20,4 +22,7 @@
       >Drop me a line</a
     > if you'd like to work on something or just chat.
   </p>
+  <div class="mt-28">
+    <Links />
+  </div>
 </div>

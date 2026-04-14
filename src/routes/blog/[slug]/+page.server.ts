@@ -5,7 +5,7 @@ import config from '../../../../keystatic.config';
 
 export const prerender = true;
 
-export async function load({ params }) {
+export async function load({ params }: { params: { slug: string } }) {
   const reader = createReader(process.cwd(), config);
   const post = await reader.collections.posts.read(params.slug);
 
@@ -17,7 +17,6 @@ export async function load({ params }) {
     title: post.title,
     date: post.date,
     excerpt: post.excerpt,
-    // Render markdown content to HTML at load time
     contentHtml: await marked(post.content ?? ''),
   };
 }

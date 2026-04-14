@@ -3,7 +3,7 @@
   import About from '$lib/components/About.svelte';
 </script>
 
-<div class="flex flex-1 flex-col">
+<div class="flex flex-1 flex-col justify-center">
   <Header />
-  <About class="flex-1" />
+  <About />
 </div>
