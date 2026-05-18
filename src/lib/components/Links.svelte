@@ -7,7 +7,7 @@
 
   const links: Link[] = [
     { text: 'Blog', href: '/blog' },
-    { text: 'Projects', href: '/projects' },
+    { text: 'Past work', href: '/work' },
     { text: 'Github', href: 'https://github.com/alexburgos', external: true },
     { text: 'Linkedin', href: 'https://www.linkedin.com/in/alexander-b-67073129', external: true },
   ];
