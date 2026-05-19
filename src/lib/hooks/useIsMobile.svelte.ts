@@ -23,6 +23,6 @@ export function useIsMobile(breakpoint: number = DEFAULT_BREAKPOINT) {
   return {
     get current() {
       return isMobile;
-    }
+    },
   };
 }
