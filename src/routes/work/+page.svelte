@@ -2,18 +2,9 @@
   import { Canvas, T } from '@threlte/core';
   import BrowserScene from './BrowserScene.svelte';
   import Breadcrumb from '$lib/components/Breadcrumb.svelte';
+  import { useIsMobile } from '$lib/hooks/useIsMobile.svelte';
 
-  const MOBILE_BREAKPOINT = 768;
-
-  let isMobile = $state(false);
-
-  $effect(() => {
-    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
-    const update = () => (isMobile = mql.matches);
-    update();
-    mql.addEventListener('change', update);
-    return () => mql.removeEventListener('change', update);
-  });
+  const isMobile = useIsMobile();
 
   const desktopLayout = [
     { position: [-3.6, 0, -0.4] as [number, number, number], baseRotationY: 0.25 },
@@ -33,14 +24,23 @@
     { src: '/projects/food52.png', url: 'https://food52.com', phase: 2.4 },
   ];
 
-  const layout = $derived(isMobile ? mobileLayout : desktopLayout);
-  const cameraPosition = $derived<[number, number, number]>(isMobile ? [0, 0, 9] : [0, 0, 6]);
+  const layout = $derived(isMobile.current ? mobileLayout : desktopLayout);
+  const cameraPosition = $derived<[number, number, number]>(
+    isMobile.current ? [0, 0, 9] : [0, 0, 6]
+  );
 </script>
 
 <div class="flex flex-1 flex-col">
   <div class="mx-auto flex w-full flex-1 flex-col px-6 py-10 lg:w-228 lg:px-0">
     <Breadcrumb crumbs={[{ label: 'past work' }]} />
-    <h1>Some products I've worked on in the last few years</h1>
+    <h1>
+      Some products I've worked on in the last few years, you can download my <a
+        href="/Resume.pdf"
+        target="_blank"
+        class="text-red-800"
+        rel="noopener noreferrer">CV</a
+      > as well
+    </h1>
   </div>
   <div class="flex flex-1 flex-col items-center justify-center gap-8">
     <div class="h-[140vh] w-full px-6 md:h-150">

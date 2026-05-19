@@ -1,5 +1,6 @@
 <script lang="ts">
   import { untrack } from 'svelte';
+  import { Spring } from 'svelte/motion';
   import { T, useTask } from '@threlte/core';
   import { interactivity, RoundedBoxGeometry, Text, useTexture } from '@threlte/extras';
 
@@ -9,11 +10,10 @@
     src: string;
     url: string;
     position?: [number, number, number];
-    baseRotationY?: number;
     phase?: number;
   }
 
-  const { src, url, position = [0, 0, 0], baseRotationY = 0, phase = 0 }: Props = $props();
+  const { src, url, position = [0, 0, 0], phase = 0 }: Props = $props();
 
   const WINDOW_WIDTH = 3;
   const WINDOW_HEIGHT = 2;
@@ -45,25 +45,17 @@
     elapsed += delta;
   });
 
-  const rotationY = $derived(baseRotationY + Math.sin(elapsed * 0.6 + phase) * 0.25);
   const positionY = $derived(position[1] + Math.sin(elapsed * 0.8 + phase) * 0.05);
 
-  const HOVER_SCALE = 1.15;
-  const SCALE_LERP = 8; // higher = snappier
-  let hovered = $state(false);
-  let scale = $state(1);
-
-  useTask((delta) => {
-    const target = hovered ? HOVER_SCALE : 1;
-    scale += (target - scale) * Math.min(1, delta * SCALE_LERP);
-  });
+  const HOVER_SCALE = 1.25;
+  const scale = new Spring(1, { stiffness: 0.15, damping: 0.6 });
 
   function handleEnter() {
-    hovered = true;
+    scale.target = HOVER_SCALE;
     document.body.style.cursor = 'pointer';
   }
   function handleLeave() {
-    hovered = false;
+    scale.target = 1;
     document.body.style.cursor = '';
   }
   function handleClick() {
@@ -75,9 +67,7 @@
   position.x={position[0]}
   position.y={positionY}
   position.z={position[2]}
-  rotation.x={-0.15}
-  rotation.y={rotationY}
-  {scale}
+  scale={scale.current}
 >
   <T.Mesh onpointerenter={handleEnter} onpointerleave={handleLeave} onclick={handleClick}>
     <RoundedBoxGeometry args={[WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_DEPTH]} radius={0.05} />
