@@ -37,12 +37,7 @@
 <div class="relative mt-10 mb-20 md:mt-0 md:mb-24">
   <div class="h-40 w-full sm:h-56 lg:h-72">
     {#if HeaderCanvas}
-      <HeaderCanvas
-        text={title}
-        color={textColor}
-        hoverColor={HOVER_COLOR}
-        onclick={toggleTheme}
-      />
+      <HeaderCanvas text={title} color={textColor} hoverColor={HOVER_COLOR} onclick={toggleTheme} />
     {/if}
   </div>
 </div>
