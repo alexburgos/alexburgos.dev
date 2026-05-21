@@ -3,12 +3,19 @@
   import BrowserScene from './BrowserScene.svelte';
   import { useIsMobile } from '$lib/hooks/useIsMobile.svelte';
 
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile(768);
+  const isTablet = useIsMobile(1024);
 
   const desktopLayout = [
-    { position: [-3.6, 0, -0.4] as [number, number, number], baseRotationY: 0.25 },
-    { position: [0, 0, 0.4] as [number, number, number], baseRotationY: 0 },
-    { position: [3.6, 0, -0.4] as [number, number, number], baseRotationY: -0.25 },
+    { position: [-3.6, 0.5, -0.4] as [number, number, number], baseRotationY: 0.25 },
+    { position: [0, 0.5, 0.4] as [number, number, number], baseRotationY: 0 },
+    { position: [3.6, 0.5, -0.4] as [number, number, number], baseRotationY: -0.25 },
+  ];
+
+  const tabletLayout = [
+    { position: [0, 3.8, 0] as [number, number, number], baseRotationY: 0 },
+    { position: [0, 1.4, 0] as [number, number, number], baseRotationY: 0 },
+    { position: [0, -1, 0] as [number, number, number], baseRotationY: 0 },
   ];
 
   const mobileLayout = [
@@ -23,9 +30,11 @@
     { src: '/projects/food52.png', url: 'https://food52.com', phase: 2.4 },
   ];
 
-  const layout = $derived(isMobile.current ? mobileLayout : desktopLayout);
+  const layout = $derived(
+    isMobile.current ? mobileLayout : isTablet.current ? tabletLayout : desktopLayout
+  );
   const cameraPosition = $derived<[number, number, number]>(
-    isMobile.current ? [0, 0, 9] : [0, 0, 6]
+    isMobile.current ? [0, 0, 9] : isTablet.current ? [0, 0, 11] : [0, 0, 6]
   );
 </script>
 

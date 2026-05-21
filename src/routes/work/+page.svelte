@@ -10,8 +10,8 @@
   });
 </script>
 
-<div class="flex flex-1 flex-col">
-  <div class="mx-auto flex w-full flex-1 flex-col px-6 py-10 lg:w-228 lg:px-0">
+<div class="flex flex-col">
+  <div class="mx-auto px-6 py-6 lg:w-228 lg:px-0">
     <Breadcrumb crumbs={[{ label: 'past work' }]} />
     <h1>
       Some products I've worked on in the last few years, you can download my <a
@@ -22,11 +22,9 @@
       > as well
     </h1>
   </div>
-  <div class="flex flex-1 flex-col items-center justify-center gap-8">
-    <div class="h-[140vh] w-full px-6 md:h-150">
-      {#if WorkCanvas}
-        <WorkCanvas />
-      {/if}
-    </div>
+  <div class="h-[135vh] w-full px-6 md:h-[175vh] lg:h-[70vh]">
+    {#if WorkCanvas}
+      <WorkCanvas />
+    {/if}
   </div>
 </div>
