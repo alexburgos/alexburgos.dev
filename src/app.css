@@ -4,7 +4,13 @@
 @plugin 'daisyui';
 
 @plugin 'daisyui' {
-  themes: lofi, black;
+  themes: lofi --default;
+}
+
+[data-theme='lofi'] {
+  --color-base-100: #faf6f0;
+  --color-base-200: #f2ede4;
+  --color-base-300: #e9e1d4;
 }
 
 h1 {

@@ -8,9 +8,9 @@
   let { class: className = '' }: Props = $props();
 
   let paragraphs = $state([
-    `Hi I'm Alex 👋, a product software engineer with over 10 years of experience. Building accessible, performant web apps with thousands of visitors. My current stack is React focused but this website is built in Svelte.
-    Lately I've been drawn to creative coding and working with AI models to create 3D graphics and other sorts of visuals.`,
-    `Besides coding, I like to shoot photos on film, mix music, talk about movies, and play some games with friends.`,
+    `Hi, I'm Alex. A  software engineer with over 10 years of experience working with product teams. My current stack is React focused but this website is built in Svelte for fun.
+    I like to experiment with creative coding AI tools to create 3D graphics and other sorts of visuals.`,
+    `Besides coding, I like analog photography, live shows and films, and I dedicate a few hours a week to playing video games with friends.`,
   ]);
 </script>
 

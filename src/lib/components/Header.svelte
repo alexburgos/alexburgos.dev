@@ -1,43 +1,40 @@
 <script lang="ts">
-  import { onMount, type Component } from 'svelte';
-
   const title = 'alex.burgos';
+  const TYPING_SPEED_MS = 120;
 
-  let HeaderCanvas = $state<Component<{
-    text: string;
-    color: string;
-    hoverColor: string;
-    onclick: () => void;
-  }> | null>(null);
-
-  onMount(async () => {
-    const mod = await import('./HeaderCanvas.svelte');
-    HeaderCanvas = mod.default;
-  });
-
-  let darkMode = $state(true);
-
-  function toggleTheme(): void {
-    darkMode = !darkMode;
-    const theme = darkMode ? 'black' : 'lofi';
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }
+  let displayedText = $state('');
 
   $effect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'black';
-    darkMode = savedTheme === 'black';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  });
+    let charCount = 0;
+    const timer = setInterval(() => {
+      charCount += 1;
+      displayedText = title.slice(0, charCount);
+      if (charCount >= title.length) {
+        clearInterval(timer);
+      }
+    }, TYPING_SPEED_MS);
 
-  const textColor = $derived(darkMode ? '#f5f5f5' : '#0a0a0a');
-  const HOVER_COLOR = '#991b1b'; // matches Tailwind red-800
+    return () => clearInterval(timer);
+  });
 </script>
 
-<div class="relative mt-10 mb-20 md:mt-0 md:mb-24">
-  <div class="h-40 w-full sm:h-56 lg:h-72">
-    {#if HeaderCanvas}
-      <HeaderCanvas text={title} color={textColor} hoverColor={HOVER_COLOR} onclick={toggleTheme} />
-    {/if}
-  </div>
+<div class="relative mt-10 mb-20 flex justify-center md:mt-0 md:mb-24">
+  <h1 class="text-4xl font-bold tracking-tight text-red-800 sm:text-5xl lg:text-6xl">
+    {displayedText}<span class="terminal-cursor" aria-hidden="true">&nbsp;</span>
+  </h1>
 </div>
+
+<style>
+  .terminal-cursor {
+    display: inline-block;
+    width: 0.55em;
+    border-right: 3px solid currentColor;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+</style>
