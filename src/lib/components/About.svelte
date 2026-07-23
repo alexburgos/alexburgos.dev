@@ -8,9 +8,8 @@
   let { class: className = '' }: Props = $props();
 
   let paragraphs = $state([
-    `Hi, I'm Alex. A  software engineer with over 10 years of experience working with product teams. My current stack is React focused but this website is built in Svelte for fun.
-    I like to experiment with creative coding AI tools to create 3D graphics and other sorts of visuals.`,
-    `Besides coding, I like analog photography, live shows and films, and I dedicate a few hours a week to playing video games with friends.`,
+    `Hi there, I'm Alex, a software engineer with over a decade of experience building alongside product teams. I work mostly in React these days, though I built this site in Svelte just for the fun of it. Lately I've been playing with creative coding and AI tools to make 3D graphics and other visual experiments`,
+    `When I'm not coding, you'll find me shooting analog photography, out at live shows, watching films, or spending a few hours a week gaming with friends.`,
   ]);
 </script>
 
@@ -21,7 +20,7 @@
   <p>
     <a href="mailto:hello@alexburgos.dev" aria-label="Contact email" class="text-red-800"
       >Drop me a line</a
-    > if you'd like to work on something or just chat.
+    > if you'd like to build something together — or just to chat.
   </p>
   <div class="mt-28">
     <Links />
